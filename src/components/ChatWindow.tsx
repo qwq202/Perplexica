@@ -514,7 +514,9 @@ const ChatWindow = ({ id }: { id?: string }) => {
   const rewrite = (messageId: string) => {
     const index = messages.findIndex((msg) => msg.messageId === messageId);
 
-    if (index === -1) return;
+    // The first message cannot be rewritten because there is no prior user
+    // input, and we also exit if the message isn't found.
+    if (index <= 0) return;
 
     const message = messages[index - 1];
 
