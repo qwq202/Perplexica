@@ -24,6 +24,7 @@ import computeSimilarity from '../utils/computeSimilarity';
 import formatChatHistoryAsString from '../utils/formatHistory';
 import eventEmitter from 'events';
 import { StreamEvent } from '@langchain/core/tracers/log_stream';
+import { sanitizeFileId } from '../utils/files';
 
 export interface MetaSearchAgentType {
   searchAndAnswer: (
@@ -306,7 +307,8 @@ class MetaSearchAgent implements MetaSearchAgentType {
 
     const filesData = fileIds
       .map((file) => {
-        const filePath = path.join(process.cwd(), 'uploads', file);
+        const safeId = sanitizeFileId(file);
+        const filePath = path.join(process.cwd(), 'uploads', safeId);
 
         const contentPath = filePath + '-extracted.json';
         const embeddingsPath = filePath + '-embeddings.json';
