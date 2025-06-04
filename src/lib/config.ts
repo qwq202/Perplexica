@@ -1,10 +1,14 @@
-import toml from '@iarna/toml';
-
 // Use dynamic imports for Node.js modules to prevent client-side errors
+let toml: any;
 let fs: any;
 let path: any;
 if (typeof window === 'undefined') {
   // We're on the server
+  try {
+    toml = require('@iarna/toml');
+  } catch {
+    toml = { parse: () => ({}), stringify: () => '' };
+  }
   fs = require('fs');
   path = require('path');
 }
@@ -97,7 +101,7 @@ export const getCustomOpenaiModelName = () =>
 export const getLMStudioApiEndpoint = () =>
   loadConfig().MODELS.LM_STUDIO.API_URL;
 
-const mergeConfigs = (current: any, update: any): any => {
+export const mergeConfigs = (current: any, update: any): any => {
   if (update === null || update === undefined) {
     return current;
   }
