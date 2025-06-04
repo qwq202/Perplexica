@@ -57,7 +57,7 @@ const MessageBox = ({
       const closeThinkTag = processedMessage.match(/<\/think>/g)?.length || 0;
 
       if (openThinkTag > closeThinkTag) {
-        processedMessage += '</think> <a> </a>'; // The extra <a> </a> is to prevent the the think component from looking bad
+        processedMessage += '</think> <a> </a>'; // The extra <a> </a> is to prevent the think component from looking bad
       }
     }
 
