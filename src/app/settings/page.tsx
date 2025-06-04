@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Switch } from '@headlessui/react';
 import ThemeSwitcher from '@/components/theme/Switcher';
+import LanguageSwitcher from '@/components/language/Switcher';
+import { useLanguage } from '@/components/language/Provider';
 import { ImagesIcon, VideoIcon } from 'lucide-react';
 import Link from 'next/link';
 import { PROVIDER_METADATA } from '@/lib/providers';
@@ -132,6 +134,7 @@ const Page = () => {
   const [embeddingModels, setEmbeddingModels] = useState<Record<string, any>>(
     {},
   );
+  const { t } = useLanguage();
   const [selectedChatModelProvider, setSelectedChatModelProvider] = useState<
     string | null
   >(null);
@@ -419,9 +422,15 @@ const Page = () => {
             <SettingsSection title="Appearance">
               <div className="flex flex-col space-y-1">
                 <p className="text-black/70 dark:text-white/70 text-sm">
-                  Theme
+                  {t('theme')}
                 </p>
                 <ThemeSwitcher />
+              </div>
+              <div className="flex flex-col space-y-1">
+                <p className="text-black/70 dark:text-white/70 text-sm">
+                  {t('language')}
+                </p>
+                <LanguageSwitcher />
               </div>
             </SettingsSection>
 
@@ -437,11 +446,10 @@ const Page = () => {
                     </div>
                     <div>
                       <p className="text-sm text-black/90 dark:text-white/90 font-medium">
-                        Automatic Image Search
+                        {t('automaticImageSearch')}
                       </p>
                       <p className="text-xs text-black/60 dark:text-white/60 mt-0.5">
-                        Automatically search for relevant images in chat
-                        responses
+                        {t('automaticallySearchImages')}
                       </p>
                     </div>
                   </div>
