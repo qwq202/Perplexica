@@ -338,7 +338,7 @@ const ChatWindow = ({ id }: { id?: string }) => {
     setMessageAppeared(false);
 
     let sources: Document[] | undefined = undefined;
-    let recievedMessage = '';
+    let receivedMessage = '';
     let added = false;
 
     messageId = messageId ?? crypto.randomBytes(7).toString('hex');
@@ -406,7 +406,7 @@ const ChatWindow = ({ id }: { id?: string }) => {
           }),
         );
 
-        recievedMessage += data.data;
+        receivedMessage += data.data;
         setMessageAppeared(true);
       }
 
@@ -414,7 +414,7 @@ const ChatWindow = ({ id }: { id?: string }) => {
         setChatHistory((prevHistory) => [
           ...prevHistory,
           ['human', message],
-          ['assistant', recievedMessage],
+          ['assistant', receivedMessage],
         ]);
 
         setLoading(false);

@@ -59,7 +59,7 @@ const handleEmitterEvents = async (
   aiMessageId: string,
   chatId: string,
 ) => {
-  let recievedMessage = '';
+  let receivedMessage = '';
   let sources: any[] = [];
 
   stream.on('data', (data) => {
@@ -75,7 +75,7 @@ const handleEmitterEvents = async (
         ),
       );
 
-      recievedMessage += parsedData.data;
+      receivedMessage += parsedData.data;
     } else if (parsedData.type === 'sources') {
       writer.write(
         encoder.encode(
@@ -103,7 +103,7 @@ const handleEmitterEvents = async (
 
     db.insert(messagesSchema)
       .values({
-        content: recievedMessage,
+        content: receivedMessage,
         chatId: chatId,
         messageId: aiMessageId,
         role: 'assistant',
