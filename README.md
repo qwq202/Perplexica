@@ -1,16 +1,16 @@
-# 🚀 Perplexica - An AI-powered search engine 🔎 <!-- omit in toc -->
+# 🚀 Perplexica - 一个由 AI 驱动的搜索引擎 🔎 <!-- omit in toc -->
 
 <div align="center" markdown="1">
-   <sup>Special thanks to:</sup>
+   <sup>特别鸣谢：</sup>
    <br>
    <br>
    <a href="https://www.warp.dev/perplexica">
       <img alt="Warp sponsorship" width="400" src="https://github.com/user-attachments/assets/775dd593-9b5f-40f1-bf48-479faff4c27b">
    </a>
 
-### [Warp, the AI Devtool that lives in your terminal](https://www.warp.dev/perplexica)
+### [Warp，存在于您终端中的 AI 开发工具](https://www.warp.dev/perplexica)
 
-[Available for MacOS, Linux, & Windows](https://www.warp.dev/perplexica)
+[适用于 MacOS、Linux 和 Windows](https://www.warp.dev/perplexica)
 
 </div>
 
@@ -20,179 +20,179 @@
 
 ![preview](.assets/perplexica-screenshot.png?)
 
-## Table of Contents <!-- omit in toc -->
+## 目录 <!-- omit in toc -->
 
-- [Overview](#overview)
-- [Preview](#preview)
-- [Features](#features)
-- [Installation](#installation)
-  - [Getting Started with Docker (Recommended)](#getting-started-with-docker-recommended)
-  - [Non-Docker Installation](#non-docker-installation)
-  - [Ollama Connection Errors](#ollama-connection-errors)
-- [Using as a Search Engine](#using-as-a-search-engine)
-- [Using Perplexica's API](#using-perplexicas-api)
-- [Expose Perplexica to a network](#expose-perplexica-to-network)
-- [One-Click Deployment](#one-click-deployment)
-- [Upcoming Features](#upcoming-features)
-- [Support Us](#support-us)
-  - [Donations](#donations)
-- [Contribution](#contribution)
-- [Help and Support](#help-and-support)
+- [概述](#概述)
+- [预览](#预览)
+- [功能](#功能)
+- [安装](#安装)
+  - [通过 Docker 开始 (推荐)](#通过-docker-开始-推荐)
+  - [非 Docker 安装](#非-docker-安装)
+  - [Ollama 连接错误](#ollama-连接错误)
+- [作为搜索引擎使用](#作为搜索引擎使用)
+- [使用 Perplexica 的 API](#使用-perplexica-的-api)
+- [将 Perplexica 暴露到网络](#将-perplexica-暴露到网络)
+- [一键部署](#一键部署)
+- [即将推出的功能](#即将推出的功能)
+- [支持我们](#支持我们)
+  - [捐赠](#捐赠)
+- [贡献](#贡献)
+- [帮助与支持](#帮助与支持)
 
-## Overview
+## 概述
 
-Perplexica is an open-source AI-powered searching tool or an AI-powered search engine that goes deep into the internet to find answers. Inspired by Perplexity AI, it's an open-source option that not just searches the web but understands your questions. It uses advanced machine learning algorithms like similarity searching and embeddings to refine results and provides clear answers with sources cited.
+Perplexica 是一款开源的 AI 驱动搜索工具或 AI 搜索引擎，它能深入互联网寻找答案。受 Perplexity AI 的启发，它是一个开源选项，不仅能搜索网页，还能理解您的问题。它使用先进的机器学习算法，如相似性搜索和嵌入来优化结果，并提供附带引用来源的清晰答案。
 
-Using SearxNG to stay current and fully open source, Perplexica ensures you always get the most up-to-date information without compromising your privacy.
+Perplexica 使用 SearxNG 保持信息最新并完全开源，确保您总能获得最新的信息，而不会损害您的隐私。
 
-Want to know more about its architecture and how it works? You can read it [here](https://github.com/ItzCrazyKns/Perplexica/tree/master/docs/architecture/README.md).
+想了解更多关于其架构和工作原理的信息吗？您可以在[这里](https://github.com/qwq202/Perplexica/tree/master/docs/architecture/README.md)阅读。
 
-## Preview
+## 预览
 
 ![video-preview](.assets/perplexica-preview.gif)
 
-## Features
+## 功能
 
-- **Local LLMs**: You can make use local LLMs such as Llama3 and Mixtral using Ollama.
-- **Two Main Modes:**
-  - **Copilot Mode:** (In development) Boosts search by generating different queries to find more relevant internet sources. Like normal search instead of just using the context by SearxNG, it visits the top matches and tries to find relevant sources to the user's query directly from the page.
-  - **Normal Mode:** Processes your query and performs a web search.
-- **Focus Modes:** Special modes to better answer specific types of questions. Perplexica currently has 6 focus modes:
-  - **All Mode:** Searches the entire web to find the best results.
-  - **Writing Assistant Mode:** Helpful for writing tasks that do not require searching the web.
-  - **Academic Search Mode:** Finds articles and papers, ideal for academic research.
-  - **YouTube Search Mode:** Finds YouTube videos based on the search query.
-  - **Wolfram Alpha Search Mode:** Answers queries that need calculations or data analysis using Wolfram Alpha.
-  - **Reddit Search Mode:** Searches Reddit for discussions and opinions related to the query.
-- **Current Information:** Some search tools might give you outdated info because they use data from crawling bots and convert them into embeddings and store them in a index. Unlike them, Perplexica uses SearxNG, a metasearch engine to get the results and rerank and get the most relevant source out of it, ensuring you always get the latest information without the overhead of daily data updates.
-- **API**: Integrate Perplexica into your existing applications and make use of its capibilities.
-- **Widgets and Discovery**:
-  - **Discover Page**: An automated news aggregator that fetches the latest articles on topics like AI and tech from specified news websites.
-  - **Homepage Widgets**: The main chat interface includes widgets for a quick glance at the weather and a featured news article, providing useful information without needing to search.
-- **Multi-language Support**: Now supports generating responses in different languages, with initial support for Simplified Chinese.
+- **本地大语言模型 (LLM)**：您可以使用 Ollama 来利用本地的 LLM，如 Llama3 和 Mixtral。
+- **两种主要模式：**
+  - **Copilot 模式：**（开发中）通过生成不同的查询来增强搜索，以找到更相关的互联网来源。与普通搜索不同，它不仅仅使用 SearxNG 的上下文，还会访问排名靠前的匹配项，并直接从页面中尝试找到与用户查询相关的来源。
+  - **普通模式：** 处理您的查询并执行网络搜索。
+- **专注模式：** 为更好地回答特定类型问题而设的特殊模式。Perplexica 目前有 6 种专注模式：
+  - **全部模式：** 搜索整个网络以找到最佳结果。
+  - **写作助手模式：** 有助于不需要搜索网络的写作任务。
+  - **学术搜索模式：** 查找文章和论文，非常适合学术研究。
+  - **YouTube 搜索模式：** 根据搜索查询查找 YouTube 视频。
+  - **Wolfram Alpha 搜索模式：** 使用 Wolfram Alpha 回答需要计算或数据分析的查询。
+  - **Reddit 搜索模式：** 在 Reddit 上搜索与查询相关的讨论和意见。
+- **最新信息：** 一些搜索工具可能会给您过时的信息，因为它们使用来自爬虫的数据，并将其转换为嵌入存储在索引中。与它们不同，Perplexica 使用元搜索引擎 SearxNG 来获取结果，并重新排序以获得最相关的来源，确保您总能获得最新的信息，而无需每日更新数据的开销。
+- **API**：将 Perplexica 集成到您现有的应用程序中，并利用其功能。
+- **小组件与发现**：
+  - **发现页面**：一个自动化的新闻聚合器，从指定的新闻网站获取有关 AI 和科技等主题的最新文章。
+  - **主页小组件**：主聊天界面包括用于快速浏览天气和精选新闻文章的小组件，无需搜索即可提供有用的信息。
+- **多语言支持**：现在支持生成不同语言的响应，初步支持简体中文。
 
-It has many more features like image and video search. Some of the planned features are mentioned in [upcoming features](#upcoming-features).
+它还有许多其他功能，如图像和视频搜索。一些计划中的功能在[即将推出的功能](#即将推出的功能)中提到。
 
-## Installation
+## 安装
 
-There are mainly 2 ways of installing Perplexica - With Docker, Without Docker. Using Docker is highly recommended.
+主要有两种安装 Perplexica 的方法——使用 Docker 和不使用 Docker。强烈推荐使用 Docker。
 
-### Getting Started with Docker (Recommended)
+### 通过 Docker 开始 (推荐)
 
-1. Ensure Docker is installed and running on your system.
-2. Clone the Perplexica repository:
+1.  确保您的系统上已安装并正在运行 Docker。
+2.  克隆 Perplexica 仓库：
 
-   ```bash
-   git clone https://github.com/ItzCrazyKns/Perplexica.git
-   ```
+    ```bash
+    git clone https://github.com/qwq202/Perplexica.git
+    ```
 
-3. After cloning, navigate to the directory containing the project files.
+3.  克隆后，导航到包含项目文件的目录。
 
-4. Rename the `sample.config.toml` file to `config.toml`. For Docker setups, you need only fill in the following fields:
+4.  将 `sample.config.toml` 文件重命名为 `config.toml`。对于 Docker 设置，您只需填写以下字段：
 
-   - `OPENAI`: Your OpenAI API key. **You only need to fill this if you wish to use OpenAI's models**.
-   - `OLLAMA`: Your Ollama API URL. You should enter it as `http://host.docker.internal:PORT_NUMBER`. If you installed Ollama on port 11434, use `http://host.docker.internal:11434`. For other ports, adjust accordingly. **You need to fill this if you wish to use Ollama's models instead of OpenAI's**.
-   - `GROQ`: Your Groq API key. **You only need to fill this if you wish to use Groq's hosted models**.
-   - `ANTHROPIC`: Your Anthropic API key. **You only need to fill this if you wish to use Anthropic models**.
+    - `OPENAI`：您的 OpenAI API 密钥。**只有在希望使用 OpenAI 模型时才需要填写此项**。
+    - `OLLAMA`：您的 Ollama API URL。您应输入为 `http://host.docker.internal:PORT_NUMBER`。如果您在端口 11434 上安装了 Ollama，请使用 `http://host.docker.internal:11434`。对于其他端口，请相应调整。**如果您希望使用 Ollama 的模型而不是 OpenAI 的模型，则需要填写此项**。
+    - `GROQ`：您的 Groq API 密钥。**只有在希望使用 Groq 托管的模型时才需要填写此项**。
+    - `ANTHROPIC`：您的 Anthropic API 密钥。**只有在希望使用 Anthropic 模型时才需要填写此项**。
 
-     **Note**: You can change these after starting Perplexica from the settings dialog.
+      **注意**：您可以在启动 Perplexica 后从设置对话框中更改这些内容。
 
-   - `SIMILARITY_MEASURE`: The similarity measure to use (This is filled by default; you can leave it as is if you are unsure about it.)
+    - `SIMILARITY_MEASURE`：要使用的相似性度量（默认已填写；如果不确定，可以保持原样）。
 
-5. Ensure you are in the directory containing the `docker-compose.yaml` file and execute:
+5.  确保您位于包含 `docker-compose.yaml` 文件的目录中，并执行：
 
-   ```bash
-   docker compose up -d
-   ```
+    ```bash
+    docker compose up -d
+    ```
 
-6. Wait a few minutes for the setup to complete. You can access Perplexica at http://localhost:3000 in your web browser.
+6.  等待几分钟以完成设置。您可以在 Web 浏览器中通过 http://localhost:3000 访问 Perplexica。
 
-**Note**: After the containers are built, you can start Perplexica directly from Docker without having to open a terminal.
+**注意**：容器构建完成后，您可以直接从 Docker 启动 Perplexica，而无需打开终端。
 
-### Non-Docker Installation
+### 非 Docker 安装
 
-1. Install SearXNG and allow `JSON` format in the SearXNG settings.
-2. Clone the repository and rename the `sample.config.toml` file to `config.toml` in the root directory. Ensure you complete all required fields in this file.
-3. After populating the configuration run `npm i`.
-4. Install the dependencies and then execute `npm run build`.
-5. Finally, start the app by running `npm rum start`
+1.  安装 SearXNG 并在 SearXNG 设置中允许 `JSON` 格式。
+2.  克隆仓库并将根目录中的 `sample.config.toml` 文件重命名为 `config.toml`。确保您填写了此文件中的所有必填字段。
+3.  填写配置后，运行 `npm i`。
+4.  安装依赖项，然后执行 `npm run build`。
+5.  最后，通过运行 `npm run start` 启动应用程序。
 
-**Note**: Using Docker is recommended as it simplifies the setup process, especially for managing environment variables and dependencies.
+**注意**：建议使用 Docker，因为它简化了设置过程，特别是在管理环境变量和依赖项方面。
 
-See the [installation documentation](https://github.com/ItzCrazyKns/Perplexica/tree/master/docs/installation) for more information like updating, etc.
+有关更新等更多信息，请参阅[安装文档](https://github.com/qwq202/Perplexica/tree/master/docs/installation)。
 
-### Ollama Connection Errors
+### Ollama 连接错误
 
-If you're encountering an Ollama connection error, it is likely due to the backend being unable to connect to Ollama's API. To fix this issue you can:
+如果您遇到 Ollama 连接错误，很可能是因为后端无法连接到 Ollama 的 API。要解决此问题，您可以：
 
-1. **Check your Ollama API URL:** Ensure that the API URL is correctly set in the settings menu.
-2. **Update API URL Based on OS:**
+1.  **检查您的 Ollama API URL：** 确保在设置菜单中正确设置了 API URL。
+2.  **根据操作系统更新 API URL：**
 
-   - **Windows:** Use `http://host.docker.internal:11434`
-   - **Mac:** Use `http://host.docker.internal:11434`
-   - **Linux:** Use `http://<private_ip_of_host>:11434`
+    - **Windows：** 使用 `http://host.docker.internal:11434`
+    - **Mac：** 使用 `http://host.docker.internal:11434`
+    - **Linux：** 使用 `http://<主机的私有IP>:11434`
 
-   Adjust the port number if you're using a different one.
+    如果您使用不同的端口，请调整端口号。
 
-3. **Linux Users - Expose Ollama to Network:**
+3.  **Linux 用户 - 将 Ollama 暴露到网络：**
 
-   - Inside `/etc/systemd/system/ollama.service`, you need to add `Environment="OLLAMA_HOST=0.0.0.0"`. Then restart Ollama by `systemctl restart ollama`. For more information see [Ollama docs](https://github.com/ollama/ollama/blob/main/docs/faq.md#setting-environment-variables-on-linux)
+    - 在 `/etc/systemd/system/ollama.service` 内部，您需要添加 `Environment="OLLAMA_HOST=0.0.0.0"`。然后通过 `systemctl restart ollama` 重启 Ollama。更多信息请参阅 [Ollama 文档](https://github.com/ollama/ollama/blob/main/docs/faq.md#setting-environment-variables-on-linux)
 
-   - Ensure that the port (default is 11434) is not blocked by your firewall.
+    - 确保端口（默认为 11434）未被防火墙阻止。
 
-## Using as a Search Engine
+## 作为搜索引擎使用
 
-If you wish to use Perplexica as an alternative to traditional search engines like Google or Bing, or if you want to add a shortcut for quick access from your browser's search bar, follow these steps:
+如果您希望将 Perplexica 作为传统搜索引擎（如 Google 或 Bing）的替代品，或者想从浏览器的搜索栏添加快捷方式以便快速访问，请按照以下步骤操作：
 
-1. Open your browser's settings.
-2. Navigate to the 'Search Engines' section.
-3. Add a new site search with the following URL: `http://localhost:3000/?q=%s`. Replace `localhost` with your IP address or domain name, and `3000` with the port number if Perplexica is not hosted locally.
-4. Click the add button. Now, you can use Perplexica directly from your browser's search bar.
+1.  打开浏览器的设置。
+2.  导航到“搜索引擎”部分。
+3.  添加一个新的站点搜索，URL 如下：`http://localhost:3000/?q=%s`。如果 Perplexica 不是本地托管的，请将 `localhost` 替换为您的 IP 地址或域名，并将 `3000` 替换为端口号。
+4.  单击添加按钮。现在，您可以直接从浏览器的搜索栏中使用 Perplexica。
 
-## Using Perplexica's API
+## 使用 Perplexica 的 API
 
-Perplexica also provides an API for developers looking to integrate its powerful search engine into their own applications. You can run searches, use multiple models and get answers to your queries.
+Perplexica 还为希望将其强大的搜索引擎集成到自己应用程序中的开发人员提供了 API。您可以运行搜索、使用多个模型并获取查询的答案。
 
-For more details, check out the full documentation [here](https://github.com/ItzCrazyKns/Perplexica/tree/master/docs/API/SEARCH.md).
+有关更多详细信息，请在此处查看完整文档[这里](https://github.com/qwq202/Perplexica/tree/master/docs/API/SEARCH.md)。
 
-## Expose Perplexica to network
+## 将 Perplexica 暴露到网络
 
-Perplexica runs on Next.js and handles all API requests. It works right away on the same network and stays accessible even with port forwarding.
+Perplexica 在 Next.js 上运行并处理所有 API 请求。它可以在同一网络上立即工作，并且即使通过端口转发也保持可访问。
 
-## One-Click Deployment
+## 一键部署
 
-[![Deploy to Sealos](https://raw.githubusercontent.com/labring-actions/templates/main/Deploy-on-Sealos.svg)](https://usw.sealos.io/?openapp=system-template%3FtemplateName%3Dperplexica)
-[![Deploy to RepoCloud](https://d16t0pc4846x52.cloudfront.net/deploylobe.svg)](https://repocloud.io/details/?app_id=267)
-[![Run on ClawCloud](https://raw.githubusercontent.com/ClawCloud/Run-Template/refs/heads/main/Run-on-ClawCloud.svg)](https://template.run.claw.cloud/?referralCode=U11MRQ8U9RM4&openapp=system-fastdeploy%3FtemplateName%3Dperplexica)
+[![部署到 Sealos](https://raw.githubusercontent.com/labring-actions/templates/main/Deploy-on-Sealos.svg)](https://usw.sealos.io/?openapp=system-template%3FtemplateName%3Dperplexica)
+[![部署到 RepoCloud](https://d16t0pc4846x52.cloudfront.net/deploylobe.svg)](https://repocloud.io/details/?app_id=267)
+[![在 ClawCloud 上运行](https://raw.githubusercontent.com/ClawCloud/Run-Template/refs/heads/main/Run-on-ClawCloud.svg)](https://template.run.claw.cloud/?referralCode=U11MRQ8U9RM4&openapp=system-fastdeploy%3FtemplateName%3Dperplexica)
 
-## Upcoming Features
+## 即将推出的功能
 
-- [x] Add settings page
-- [x] Adding support for local LLMs
-- [x] History Saving features
-- [x] Introducing various Focus Modes
-- [x] Adding API support
-- [x] Adding Discover
-- [ ] Finalizing Copilot Mode
+- [x] 添加设置页面
+- [x] 添加对本地 LLM 的支持
+- [x] 历史保存功能
+- [x] 引入各种专注模式
+- [x] 添加 API 支持
+- [x] 添加发现页面
+- [ ] 完成 Copilot 模式
 
-## Support Us
+## 支持我们
 
-If you find Perplexica useful, consider giving us a star on GitHub. This helps more people discover Perplexica and supports the development of new features. Your support is greatly appreciated.
+如果您觉得 Perplexica 有用，请考虑在 GitHub 上给我们一个星。这有助于更多人发现 Perplexica 并支持新功能的开发。非常感谢您的支持。
 
-### Donations
+### 捐赠
 
-We also accept donations to help sustain our project. If you would like to contribute, you can use the following options to donate. Thank you for your support!
+我们也接受捐赠以帮助维持我们的项目。如果您想做出贡献，可以使用以下选项进行捐赠。感谢您的支持！
 
-| Ethereum                                              |
+| 以太坊                                                |
 | ----------------------------------------------------- |
-| Address: `0xB025a84b2F269570Eb8D4b05DEdaA41D8525B6DD` |
+| 地址: `0xB025a84b2F269570Eb8D4b05DEdaA41D8525B6DD` |
 
-## Contribution
+## 贡献
 
-Perplexica is built on the idea that AI and large language models should be easy for everyone to use. If you find bugs or have ideas, please share them in via GitHub Issues. For more information on contributing to Perplexica you can read the [CONTRIBUTING.md](CONTRIBUTING.md) file to learn more about Perplexica and how you can contribute to it.
+Perplexica 的建立基于一个理念，即 AI 和大型语言模型应该易于每个人使用。如果您发现错误或有任何想法，请通过 GitHub Issues 分享。有关为 Perplexica 做出贡献的更多信息，您可以阅读 [CONTRIBUTING.md](CONTRIBUTING.md) 文件，以了解有关 Perplexica 的更多信息以及如何为其做出贡献。
 
-## Help and Support
+## 帮助与支持
 
-If you have any questions or feedback, please feel free to reach out to us. You can create an issue on GitHub or join our Discord server. There, you can connect with other users, share your experiences and reviews, and receive more personalized help. [Click here](https://discord.gg/EFwsmQDgAu) to join the Discord server. To discuss matters outside of regular support, feel free to contact me on Discord at `itzcrazykns`.
+如果您有任何问题或反馈，请随时与我们联系。您可以在 GitHub 上创建一个 issue 或加入我们的 Discord 服务器。在那里，您可以与其他用户联系，分享您的经验和评论，并获得更个性化的帮助。[点击这里](https://discord.gg/EFwsmQDgAu)加入 Discord 服务器。要讨论常规支持之外的事项，请随时在 Discord 上与我联系，我的用户名是 `itzcrazykns`。
 
-Thank you for exploring Perplexica, the AI-powered search engine designed to enhance your search experience. We are constantly working to improve Perplexica and expand its capabilities. We value your feedback and contributions which help us make Perplexica even better. Don't forget to check back for updates and new features!
+感谢您探索 Perplexica，这款旨在增强您搜索体验的 AI 驱动搜索引擎。我们正在不断努力改进 Perplexica 并扩展其功能。我们重视您的反馈和贡献，这有助于我们使 Perplexica 变得更好。别忘了回来查看更新和新功能！
