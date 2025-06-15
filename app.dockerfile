@@ -1,4 +1,4 @@
-FROM node:20.18.0-slim AS builder
+FROM node:22.0.0-slim AS builder
 
 WORKDIR /home/perplexica
 
@@ -15,7 +15,7 @@ RUN yarn build
 RUN yarn add --dev @vercel/ncc
 RUN yarn ncc build ./src/lib/db/migrate.ts -o migrator
 
-FROM node:20.18.0-slim
+FROM node:22.0.0-slim
 
 WORKDIR /home/perplexica
 

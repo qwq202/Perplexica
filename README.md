@@ -1,20 +1,5 @@
 # 🚀 Perplexica - An AI-powered search engine 🔎 <!-- omit in toc -->
 
-<div align="center" markdown="1">
-   <sup>Special thanks to:</sup>
-   <br>
-   <br>
-   <a href="https://www.warp.dev/perplexica">
-      <img alt="Warp sponsorship" width="400" src="https://github.com/user-attachments/assets/775dd593-9b5f-40f1-bf48-479faff4c27b">
-   </a>
-
-### [Warp, the AI Devtool that lives in your terminal](https://www.warp.dev/perplexica)
-
-[Available for MacOS, Linux, & Windows](https://www.warp.dev/perplexica)
-
-</div>
-
-<hr/>
 
 [![Discord](https://dcbadge.vercel.app/api/server/26aArMy8tT?style=flat&compact=true)](https://discord.gg/26aArMy8tT)
 
@@ -32,10 +17,8 @@
 - [Using as a Search Engine](#using-as-a-search-engine)
 - [Using Perplexica's API](#using-perplexicas-api)
 - [Expose Perplexica to a network](#expose-perplexica-to-network)
-- [One-Click Deployment](#one-click-deployment)
 - [Upcoming Features](#upcoming-features)
 - [Support Us](#support-us)
-  - [Donations](#donations)
 - [Contribution](#contribution)
 - [Help and Support](#help-and-support)
 
@@ -45,7 +28,7 @@ Perplexica is an open-source AI-powered searching tool or an AI-powered search e
 
 Using SearxNG to stay current and fully open source, Perplexica ensures you always get the most up-to-date information without compromising your privacy.
 
-Want to know more about its architecture and how it works? You can read it [here](https://github.com/ItzCrazyKns/Perplexica/tree/master/docs/architecture/README.md).
+Want to know more about its architecture and how it works? You can read it [here](https://github.com/qwq202/Perplexica/tree/master/docs/architecture/README.md).
 
 ## Preview
 
@@ -55,7 +38,7 @@ Want to know more about its architecture and how it works? You can read it [here
 
 - **Local LLMs**: You can make use local LLMs such as Llama3 and Mixtral using Ollama.
 - **Two Main Modes:**
-  - **Copilot Mode:** (In development) Boosts search by generating different queries to find more relevant internet sources. Like normal search instead of just using the context by SearxNG, it visits the top matches and tries to find relevant sources to the user's query directly from the page.
+  - **Quality Mode:** Boosts search by generating different queries to find more relevant internet sources. Like normal search instead of just using the context by SearxNG, it visits the top matches and tries to find relevant sources to the user's query directly from the page.
   - **Normal Mode:** Processes your query and performs a web search.
 - **Focus Modes:** Special modes to better answer specific types of questions. Perplexica currently has 6 focus modes:
   - **All Mode:** Searches the entire web to find the best results.
@@ -69,7 +52,7 @@ Want to know more about its architecture and how it works? You can read it [here
 - **Widgets and Discovery**:
   - **Discover Page**: An automated news aggregator that fetches the latest articles on topics like AI and tech from specified news websites.
   - **Homepage Widgets**: The main chat interface includes widgets for a quick glance at the weather and a featured news article, providing useful information without needing to search.
-- **Multi-language Support**: Now supports generating responses in different languages, with initial support for Simplified Chinese.
+- **Multi-language Support**: Fully supports generating responses in different languages, including Simplified Chinese.
 
 It has many more features like image and video search. Some of the planned features are mentioned in [upcoming features](#upcoming-features).
 
@@ -83,7 +66,7 @@ There are mainly 2 ways of installing Perplexica - With Docker, Without Docker. 
 2. Clone the Perplexica repository:
 
    ```bash
-   git clone https://github.com/ItzCrazyKns/Perplexica.git
+   git clone https://github.com/qwq202/Perplexica.git
    ```
 
 3. After cloning, navigate to the directory containing the project files.
@@ -119,7 +102,7 @@ There are mainly 2 ways of installing Perplexica - With Docker, Without Docker. 
 
 **Note**: Using Docker is recommended as it simplifies the setup process, especially for managing environment variables and dependencies.
 
-See the [installation documentation](https://github.com/ItzCrazyKns/Perplexica/tree/master/docs/installation) for more information like updating, etc.
+See the [installation documentation](https://github.com/qwq202/Perplexica/tree/master/docs/installation) for more information like updating, etc.
 
 ### Ollama Connection Errors
 
@@ -153,17 +136,11 @@ If you wish to use Perplexica as an alternative to traditional search engines li
 
 Perplexica also provides an API for developers looking to integrate its powerful search engine into their own applications. You can run searches, use multiple models and get answers to your queries.
 
-For more details, check out the full documentation [here](https://github.com/ItzCrazyKns/Perplexica/tree/master/docs/API/SEARCH.md).
+For more details, check out the full documentation [here](https://github.com/qwq202/Perplexica/tree/master/docs/API/SEARCH.md).
 
 ## Expose Perplexica to network
 
 Perplexica runs on Next.js and handles all API requests. It works right away on the same network and stays accessible even with port forwarding.
-
-## One-Click Deployment
-
-[![Deploy to Sealos](https://raw.githubusercontent.com/labring-actions/templates/main/Deploy-on-Sealos.svg)](https://usw.sealos.io/?openapp=system-template%3FtemplateName%3Dperplexica)
-[![Deploy to RepoCloud](https://d16t0pc4846x52.cloudfront.net/deploylobe.svg)](https://repocloud.io/details/?app_id=267)
-[![Run on ClawCloud](https://raw.githubusercontent.com/ClawCloud/Run-Template/refs/heads/main/Run-on-ClawCloud.svg)](https://template.run.claw.cloud/?referralCode=U11MRQ8U9RM4&openapp=system-fastdeploy%3FtemplateName%3Dperplexica)
 
 ## Upcoming Features
 
@@ -173,19 +150,12 @@ Perplexica runs on Next.js and handles all API requests. It works right away on 
 - [x] Introducing various Focus Modes
 - [x] Adding API support
 - [x] Adding Discover
-- [ ] Finalizing Copilot Mode
+- [x] Finalizing Quality Mode
 
 ## Support Us
 
 If you find Perplexica useful, consider giving us a star on GitHub. This helps more people discover Perplexica and supports the development of new features. Your support is greatly appreciated.
 
-### Donations
-
-We also accept donations to help sustain our project. If you would like to contribute, you can use the following options to donate. Thank you for your support!
-
-| Ethereum                                              |
-| ----------------------------------------------------- |
-| Address: `0xB025a84b2F269570Eb8D4b05DEdaA41D8525B6DD` |
 
 ## Contribution
 
@@ -193,6 +163,6 @@ Perplexica is built on the idea that AI and large language models should be easy
 
 ## Help and Support
 
-If you have any questions or feedback, please feel free to reach out to us. You can create an issue on GitHub or join our Discord server. There, you can connect with other users, share your experiences and reviews, and receive more personalized help. [Click here](https://discord.gg/EFwsmQDgAu) to join the Discord server. To discuss matters outside of regular support, feel free to contact me on Discord at `itzcrazykns`.
+If you have any questions or feedback, please feel free to reach out to us. You can create an issue on GitHub or join our Discord server. There, you can connect with other users, share your experiences and reviews, and receive more personalized help. [Click here](https://discord.gg/EFwsmQDgAu) to join the Discord server.
 
 Thank you for exploring Perplexica, the AI-powered search engine designed to enhance your search experience. We are constantly working to improve Perplexica and expand its capabilities. We value your feedback and contributions which help us make Perplexica even better. Don't forget to check back for updates and new features!

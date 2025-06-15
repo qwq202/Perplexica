@@ -1,32 +1,42 @@
 [GENERAL]
-SIMILARITY_MEASURE = "cosine" # "cosine" or "dot"
-KEEP_ALIVE = "5m" # How long to keep Ollama models loaded into memory. (Instead of using -1 use "-1m")
+# 通用设置
+SIMILARITY_MEASURE = "cosine" # 相似度度量方法，可选 "cosine" (余弦相似度) 或 "dot" (点积)。
+KEEP_ALIVE = "5m" # Ollama 模型在内存中保持加载状态的时间 (若要永久保持，请使用 "-1m" 而不是 -1)。
 
 [MODELS.OPENAI]
-API_KEY = ""
+# OpenAI 模型设置
+API_KEY = "" # 您的 OpenAI API 密钥。
 
 [MODELS.GROQ]
-API_KEY = ""
+# Groq 模型设置
+API_KEY = "" # 您的 Groq API 密钥。
 
 [MODELS.ANTHROPIC]
-API_KEY = ""
+# Anthropic 模型设置
+API_KEY = "" # 您的 Anthropic API 密钥。
 
 [MODELS.GEMINI]
-API_KEY = ""
+# Gemini 模型设置
+API_KEY = "" # 您的 Gemini API 密钥。
 
 [MODELS.CUSTOM_OPENAI]
-API_KEY = ""
-API_URL = ""
-MODEL_NAME = ""
+# 自定义 OpenAI 兼容模型设置
+API_KEY = "" # 您的 API 密钥。
+API_URL = "" # 您的 API URL。
+MODEL_NAME = "" # 您要使用的模型名称。
 
 [MODELS.OLLAMA]
-API_URL = "" # Ollama API URL - http://host.docker.internal:11434
+# Ollama 模型设置
+API_URL = "" # Ollama API URL - 例如：http://host.docker.internal:11434
 
 [MODELS.DEEPSEEK]
-API_KEY = ""
+# DeepSeek 模型设置
+API_KEY = "" # 您的 DeepSeek API 密钥。
 
 [MODELS.LM_STUDIO]
-API_URL = "" # LM Studio API URL - http://host.docker.internal:1234
+# LM Studio 模型设置
+API_URL = "" # LM Studio API URL - 例如：http://host.docker.internal:1234
 
 [API_ENDPOINTS]
-SEARXNG = "" # SearxNG API URL - http://localhost:32768
+# API 端点设置
+SEARXNG = "" # SearxNG API URL - 例如：http://localhost:32768
