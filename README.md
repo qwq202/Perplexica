@@ -1,20 +1,5 @@
 # 🚀 Perplexica - 一个由 AI 驱动的搜索引擎 🔎 <!-- omit in toc -->
 
-<div align="center" markdown="1">
-   <sup>特别鸣谢：</sup>
-   <br>
-   <br>
-   <a href="https://www.warp.dev/perplexica">
-      <img alt="Warp sponsorship" width="400" src="https://github.com/user-attachments/assets/775dd593-9b5f-40f1-bf48-479faff4c27b">
-   </a>
-
-### [Warp，存在于您终端中的 AI 开发工具](https://www.warp.dev/perplexica)
-
-[适用于 MacOS、Linux 和 Windows](https://www.warp.dev/perplexica)
-
-</div>
-
-<hr/>
 
 [![Discord](https://dcbadge.vercel.app/api/server/26aArMy8tT?style=flat&compact=true)](https://discord.gg/26aArMy8tT)
 
@@ -32,10 +17,8 @@
 - [作为搜索引擎使用](#作为搜索引擎使用)
 - [使用 Perplexica 的 API](#使用-perplexica-的-api)
 - [将 Perplexica 暴露到网络](#将-perplexica-暴露到网络)
-- [一键部署](#一键部署)
 - [即将推出的功能](#即将推出的功能)
 - [支持我们](#支持我们)
-  - [捐赠](#捐赠)
 - [贡献](#贡献)
 - [帮助与支持](#帮助与支持)
 
@@ -55,7 +38,7 @@ Perplexica 使用 SearxNG 保持信息最新并完全开源，确保您总能获
 
 - **本地大语言模型 (LLM)**：您可以使用 Ollama 来利用本地的 LLM，如 Llama3 和 Mixtral。
 - **两种主要模式：**
-  - **Copilot 模式：**（开发中）通过生成不同的查询来增强搜索，以找到更相关的互联网来源。与普通搜索不同，它不仅仅使用 SearxNG 的上下文，还会访问排名靠前的匹配项，并直接从页面中尝试找到与用户查询相关的来源。
+  - **质量模式：** 通过生成不同的查询来增强搜索，以找到更相关的互联网来源。与普通搜索不同，它不仅仅使用 SearxNG 的上下文，还会访问排名靠前的匹配项，并直接从页面中尝试找到与用户查询相关的来源。
   - **普通模式：** 处理您的查询并执行网络搜索。
 - **专注模式：** 为更好地回答特定类型问题而设的特殊模式。Perplexica 目前有 6 种专注模式：
   - **全部模式：** 搜索整个网络以找到最佳结果。
@@ -69,7 +52,7 @@ Perplexica 使用 SearxNG 保持信息最新并完全开源，确保您总能获
 - **小组件与发现**：
   - **发现页面**：一个自动化的新闻聚合器，从指定的新闻网站获取有关 AI 和科技等主题的最新文章。
   - **主页小组件**：主聊天界面包括用于快速浏览天气和精选新闻文章的小组件，无需搜索即可提供有用的信息。
-- **多语言支持**：现在支持生成不同语言的响应，初步支持简体中文。
+- **多语言支持**：完全支持生成不同语言的响应，包括简体中文。
 
 它还有许多其他功能，如图像和视频搜索。一些计划中的功能在[即将推出的功能](#即将推出的功能)中提到。
 
@@ -159,12 +142,6 @@ Perplexica 还为希望将其强大的搜索引擎集成到自己应用程序中
 
 Perplexica 在 Next.js 上运行并处理所有 API 请求。它可以在同一网络上立即工作，并且即使通过端口转发也保持可访问。
 
-## 一键部署
-
-[![部署到 Sealos](https://raw.githubusercontent.com/labring-actions/templates/main/Deploy-on-Sealos.svg)](https://usw.sealos.io/?openapp=system-template%3FtemplateName%3Dperplexica)
-[![部署到 RepoCloud](https://d16t0pc4846x52.cloudfront.net/deploylobe.svg)](https://repocloud.io/details/?app_id=267)
-[![在 ClawCloud 上运行](https://raw.githubusercontent.com/ClawCloud/Run-Template/refs/heads/main/Run-on-ClawCloud.svg)](https://template.run.claw.cloud/?referralCode=U11MRQ8U9RM4&openapp=system-fastdeploy%3FtemplateName%3Dperplexica)
-
 ## 即将推出的功能
 
 - [x] 添加设置页面
@@ -173,19 +150,12 @@ Perplexica 在 Next.js 上运行并处理所有 API 请求。它可以在同一�
 - [x] 引入各种专注模式
 - [x] 添加 API 支持
 - [x] 添加发现页面
-- [ ] 完成 Copilot 模式
+- [x] 完成质量模式
 
 ## 支持我们
 
 如果您觉得 Perplexica 有用，请考虑在 GitHub 上给我们一个星。这有助于更多人发现 Perplexica 并支持新功能的开发。非常感谢您的支持。
 
-### 捐赠
-
-我们也接受捐赠以帮助维持我们的项目。如果您想做出贡献，可以使用以下选项进行捐赠。感谢您的支持！
-
-| 以太坊                                                |
-| ----------------------------------------------------- |
-| 地址: `0xB025a84b2F269570Eb8D4b05DEdaA41D8525B6DD` |
 
 ## 贡献
 
@@ -193,6 +163,6 @@ Perplexica 的建立基于一个理念，即 AI 和大型语言模型应该易�
 
 ## 帮助与支持
 
-如果您有任何问题或反馈，请随时与我们联系。您可以在 GitHub 上创建一个 issue 或加入我们的 Discord 服务器。在那里，您可以与其他用户联系，分享您的经验和评论，并获得更个性化的帮助。[点击这里](https://discord.gg/EFwsmQDgAu)加入 Discord 服务器。要讨论常规支持之外的事项，请随时在 Discord 上与我联系，我的用户名是 `itzcrazykns`。
+如果您有任何问题或反馈，请随时与我们联系。您可以在 GitHub 上创建一个 issue 或加入我们的 Discord 服务器。在那里，您可以与其他用户联系，分享您的经验和评论，并获得更个性化的帮助。[点击这里](https://discord.gg/EFwsmQDgAu)加入 Discord 服务器。
 
 感谢您探索 Perplexica，这款旨在增强您搜索体验的 AI 驱动搜索引擎。我们正在不断努力改进 Perplexica 并扩展其功能。我们重视您的反馈和贡献，这有助于我们使 Perplexica 变得更好。别忘了回来查看更新和新功能！
