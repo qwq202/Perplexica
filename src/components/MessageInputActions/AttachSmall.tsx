@@ -21,7 +21,7 @@ const AttachSmall = ({
   setFiles: (files: FileType[]) => void;
 }) => {
   const [loading, setLoading] = useState(false);
-  const fileInputRef = useRef<any>();
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     setLoading(true);
@@ -81,7 +81,7 @@ const AttachSmall = ({
               <div className="flex flex-row items-center space-x-4">
                 <button
                   type="button"
-                  onClick={() => fileInputRef.current.click()}
+                  onClick={() => fileInputRef.current?.click()}
                   className="flex flex-row items-center space-x-1 text-black/70 dark:text-white/70 hover:text-black hover:dark:text-white transition duration-200"
                 >
                   <input
@@ -134,7 +134,7 @@ const AttachSmall = ({
   ) : (
     <button
       type="button"
-      onClick={() => fileInputRef.current.click()}
+      onClick={() => fileInputRef.current?.click()}
       className="flex flex-row items-center space-x-1 text-black/50 dark:text-white/50 rounded-xl hover:bg-light-secondary dark:hover:bg-dark-secondary transition duration-200 hover:text-black dark:hover:text-white p-1"
     >
       <input

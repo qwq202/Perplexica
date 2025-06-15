@@ -7,6 +7,20 @@
 
 ## 目录 <!-- omit in toc -->
 
+- [概述](#概述)
+- [预览](#预览)
+- [功能](#功能)
+- [安装](#安装)
+  - [通过 Docker 开始 (推荐)](#通过-docker-开始-推荐)
+  - [非 Docker 安装](#非-docker-安装)
+  - [Ollama 连接错误](#ollama-连接错误)
+- [作为搜索引擎使用](#作为搜索引擎使用)
+- [使用 Perplexica 的 API](#使用-perplexica-的-api)
+- [将 Perplexica 暴露到网络](#将-perplexica-暴露到网络)
+- [即将推出的功能](#即将推出的功能)
+- [支持我们](#支持我们)
+- [贡献](#贡献)
+- [帮助与支持](#帮助与支持)
 
 ## 概述
 
@@ -14,13 +28,13 @@ Perplexica 是一款开源的 AI 驱动搜索工具或 AI 搜索引擎，它能�
 
 Perplexica 使用 SearxNG 保持信息最新并完全开源，确保您总能获得最新的信息，而不会损害您的隐私。
 
-
+想了解更多关于其架构和工作原理的信息吗？您可以在[这里](https://github.com/qwq202/Perplexica/tree/master/docs/architecture/README.md)阅读。
 
 ## 预览
 
 ![video-preview](.assets/perplexica-preview.gif)
 
-
+## 功能
 
 - **本地大语言模型 (LLM)**：您可以使用 Ollama 来利用本地的 LLM，如 Llama3 和 Mixtral。
 - **两种主要模式：**
@@ -42,7 +56,7 @@ Perplexica 使用 SearxNG 保持信息最新并完全开源，确保您总能获
 
 它还有许多其他功能，如图像和视频搜索。一些计划中的功能在[即将推出的功能](#即将推出的功能)中提到。
 
-
+## 安装
 
 主要有两种安装 Perplexica 的方法——使用 Docker 和不使用 Docker。强烈推荐使用 Docker。
 
@@ -76,7 +90,7 @@ Perplexica 使用 SearxNG 保持信息最新并完全开源，确保您总能获
 
 6.  等待几分钟以完成设置。您可以在 Web 浏览器中通过 http://localhost:3000 访问 Perplexica。
 
-
+**注意**：容器构建完成后，您可以直接从 Docker 启动 Perplexica，而无需打开终端。
 
 ### 非 Docker 安装
 
@@ -111,7 +125,7 @@ Perplexica 使用 SearxNG 保持信息最新并完全开源，确保您总能获
 
 ## 作为搜索引擎使用
 
-
+如果您希望将 Perplexica 作为传统搜索引擎（如 Google 或 Bing）的替代品，或者想从浏览器的搜索栏添加快捷方式以便快速访问，请按照以下步骤操作：
 
 1.  打开浏览器的设置。
 2.  导航到“搜索引擎”部分。
@@ -120,7 +134,13 @@ Perplexica 使用 SearxNG 保持信息最新并完全开源，确保您总能获
 
 ## 使用 Perplexica 的 API
 
+Perplexica 还为希望将其强大的搜索引擎集成到自己应用程序中的开发人员提供了 API。您可以运行搜索、使用多个模型并获取查询的答案。
 
+有关更多详细信息，请在此处查看完整文档[这里](https://github.com/qwq202/Perplexica/tree/master/docs/API/SEARCH.md)。
+
+## 将 Perplexica 暴露到网络
+
+Perplexica 在 Next.js 上运行并处理所有 API 请求。它可以在同一网络上立即工作，并且即使通过端口转发也保持可访问。
 
 ## 即将推出的功能
 
@@ -132,6 +152,9 @@ Perplexica 使用 SearxNG 保持信息最新并完全开源，确保您总能获
 - [x] 添加发现页面
 - [x] 完成质量模式
 
+## 支持我们
+
+如果您觉得 Perplexica 有用，请考虑在 GitHub 上给我们一个星。这有助于更多人发现 Perplexica 并支持新功能的开发。非常感谢您的支持。
 
 
 ## 贡献
@@ -140,5 +163,6 @@ Perplexica 的建立基于一个理念，即 AI 和大型语言模型应该易�
 
 ## 帮助与支持
 
+如果您有任何问题或反馈，请随时与我们联系。您可以在 GitHub 上创建一个 issue 或加入我们的 Discord 服务器。在那里，您可以与其他用户联系，分享您的经验和评论，并获得更个性化的帮助。[点击这里](https://discord.gg/EFwsmQDgAu)加入 Discord 服务器。
 
 感谢您探索 Perplexica，这款旨在增强您搜索体验的 AI 驱动搜索引擎。我们正在不断努力改进 Perplexica 并扩展其功能。我们重视您的反馈和贡献，这有助于我们使 Perplexica 变得更好。别忘了回来查看更新和新功能！

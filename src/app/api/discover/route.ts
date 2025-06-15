@@ -1,4 +1,4 @@
-import { searchSearxng } from '@/lib/searxng';
+import { searchSearxng, type SearxngSearchResult } from '@/lib/searxng';
 
 const articleWebsites = [
   'yahoo.com',
@@ -20,7 +20,7 @@ export const GET = async (req: Request) => {
     const mode: 'normal' | 'preview' =
       (params.get('mode') as 'normal' | 'preview') || 'normal';
 
-    let data = [];
+    let data: SearxngSearchResult[] = [];
 
     if (mode === 'normal') {
       const allResults = [];
